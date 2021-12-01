@@ -9,25 +9,22 @@
         <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet">
     </head>
     <body>
-        <div class="row">
-            <div class="sidebar col-lg-2 col-md-3">
-                <h2>Wiki</h2>
-                <form>
+        <div class="relative d-sm-flex flex-wrap">
+            <div class="absolute sidebar col-lg-3 col-md-5">
+                <form action="{% url 'search' %}" method="post">
+                    {% csrf_token %}
                     <input class="search" type="text" name="q" placeholder="Search Encyclopedia">
                 </form>
                 <div>
                     <a href="{% url 'index' %}">Home</a>
                 </div>
                 <div>
-                    Create New Page
-                </div>
-                <div>
-                    Random Page
+                    <a href="{% url 'newpage' %}">Create New Page</a>
                 </div>
                 {% block nav %}
                 {% endblock %}
             </div>
-            <div class="main col-lg-10 col-md-9">
+            <div class="main col-lg-9 col-md-7">
                 {% block body %}
                 {% endblock %}
             </div>

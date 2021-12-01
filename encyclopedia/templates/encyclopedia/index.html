@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block body %}
-    <h1>All Pages</h1>
+    <h1>Encyclopedia</h1>
+    <hr style="width: 120%;">
 
     <ul>
         {% for entry in entries %}
-            <li>{{ entry }}</li>
+            <li><a href="{% url 'title' entry %}">{{ entry }}</a></li>
         {% endfor %}
     </ul>
-
 {% endblock %}

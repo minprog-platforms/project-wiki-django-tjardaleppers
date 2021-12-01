@@ -1,0 +1,1 @@
+The World Wide Web (WWW), commonly known as **the Web**, is an information system where documents and other web resources are identified by Uniform Resource Locators (URLs, such as *https://example.com/*), which may be interlinked by hyperlinks, and are accessible over the Internet.
